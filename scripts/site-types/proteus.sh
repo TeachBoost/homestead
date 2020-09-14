@@ -50,6 +50,10 @@ block="server {
         proxy_pass   http://api.$1/;
     }
 
+    location /sketch/ {
+        proxy_pass   http://sketch.$1/;
+    }
+
     location = /favicon.ico { access_log off; log_not_found off; }
     location = /robots.txt  { access_log off; log_not_found off; }
 
